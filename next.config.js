@@ -1,7 +1,6 @@
 /** @type {import('next').NextConfig} */
 module.exports = {
   reactStrictMode: false,
-  transpilePackages: ["react-leaflet-cluster"],
   resolve: {
     extensions: ['.ts', '.tsx', '.js', '.jsx']
   },

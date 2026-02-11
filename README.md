@@ -1,54 +1,40 @@
-## Getting Started
+# Next Pure ERC20 Swap (Next.js)
 
+![Modern Neon Sci-Fi Fantasy Book Cover copy](https://github.com/FanbaseLabs/React-Aggregate-ERC20-Swap/assets/145924938/277ca724-0bf4-4815-a4f9-12a26d467a69)
 
-![Modern Neon Sci-Fi Fantasy Book Cover  copy](https://github.com/FanbaseLabs/React-Aggregate-ERC20-Swap/assets/145924938/277ca724-0bf4-4815-a4f9-12a26d467a69)
+This repository is a minimal Next.js app that renders `fanbase-pure-erc20-swap-widget` on the home page.
 
-\
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). 
+## What is in the code
 
-You can use this NextJS template, in conjunction with a plan at [https://www.plan.fanbase.io](https://www.plan.fanbase.io), 
-to swap ERC20 tokens on 20+ EVM networks, from your own website. 
+- `pages/index.tsx`: loads `fanbase-pure-erc20-swap-widget` with `next/dynamic` and `ssr: false`.
+- `pages/api/hello.ts`: sample Next.js API route.
+- `pages/_app.tsx`: global app wrapper and global CSS import.
 
-With a paid plan at [https://www.plan.fanbase.io](https://www.plan.fanbase.io), you can limit swapping pairs 
-to one specific token address, like for distributing only one token from your site. 
-
-View the documentation here: [https://fanbase-io.gitbook.io/docs/reference/swap-widget-sdk/pure-swap-widget](https://fanbase-io.gitbook.io/docs/reference/swap-widget-sdk/pure-swap-widget). 
-
-![PM-3](https://github.com/FanbaseLabs/React-Aggregate-ERC20-Swap/assets/145924938/58fb1d00-438f-494d-9c18-53dbc6549c1d) 
-
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
-
-
-
-## NextJS Environment
-
-First, run the development server:
+## Install and run
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
 ```
 
-Next,open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open `http://localhost:3000`.
 
-Then, you can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+## Available scripts
 
-Last, [API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+- `npm run dev`: start local development server.
+- `npm run build`: create production build.
+- `npm run start`: start production server.
+- `npm run lint`: run Next.js ESLint checks.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## Widget docs
 
-## Learn More
+Pure swap widget reference:
+https://fanbase-io.gitbook.io/docs/reference/swap-widget-sdk/pure-swap-widget
 
-To learn more about Next.js, take a look at the following resources:
+Plan/app access:
+https://www.plan.fanbase.io
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Notes
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome.
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out the [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- Current widget configuration is in `pages/index.tsx` (`appId` and `chainId`).
+- If you change widget package usage in code, keep `package.json` dependencies in sync.
